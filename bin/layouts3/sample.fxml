@@ -1,0 +1,34 @@
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane fx:controller="layouts3.Controller" xmlns:fx="http://javafx.com/fxml" >
+	<top>
+		<Label text="Java Fx :D" alignment="center" 
+		BorderPane.alignment="center" style="-fx-border-color:blue; -fx-border-width: 2; -fx-border-style: dashed"/>
+	</top>
+	<left>
+		<Label text="Texto da posição esquerda" alignment="center"/>
+	</left>
+	<center>
+		<Label text="Texto da posição central, é um texto beeeeeeeeeeeeeeeeeeeeeeeeeeeeeeem longe. " alignment="center"/>
+	</center>
+	<right>
+		<Label text="Texto da posição direita" alignment="center"/>
+	</right>
+	<bottom>
+		<HBox spacing="10" alignment="top_right">
+		    <padding>
+		    	<Insets bottom="10" right="10"/>
+		    </padding>
+		    <Button text="Ok" prefWidth="90"/>
+		    <Button text="Cancel" prefWidth="90"/>
+		    <Button text="Help" prefWidth="90"/>
+		 </HBox>
+	 </bottom>
+</BorderPane>

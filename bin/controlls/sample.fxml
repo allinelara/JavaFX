@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.ColorPicker?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Accordion?>
+
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.collections.*?>
+<?import java.lang.String?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.control.ToggleButton?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.text.Font?>
+<GridPane fx:controller="controlls.Controller" xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10">
+	<Button text="Click aqui" GridPane.rowIndex="0" GridPane.columnIndex="0">
+    	<graphic>
+    		<ImageView>
+    			<Image url="@/toolbarButtonGraphics/general/TipOfTheDay24.gif"/>
+    		</ImageView>	
+    	</graphic>
+    </Button>
+    <Label GridPane.rowIndex="0" GridPane.columnIndex="1" text="Este é um texto muito grande mesmo. É um texto enorme. " textFill="blue" WrapText="true">
+    <font>
+   		<Font name="Arial italic" size="12"/>
+    </font>
+    <graphic>
+    	<ImageView>
+    		<Image url="@/toolbarButtonGraphics/general/Information24.gif"/>
+    	</ImageView>	
+    </graphic>
+    </Label> 	
+    <fx:define>
+    	<ToggleGroup fx:id="colorToggleGroup"/>
+    </fx:define>
+    <RadioButton GridPane.rowIndex="0" GridPane.columnIndex="2" text="Vermelho" toggleGroup="$colorToggleGroup"/>
+	<RadioButton GridPane.rowIndex="0" GridPane.columnIndex="3" text="Verde" toggleGroup="$colorToggleGroup" selected="true"/>
+	<RadioButton GridPane.rowIndex="0" GridPane.columnIndex="4" text="Amarelo" toggleGroup="$colorToggleGroup"/>
+	
+	<VBox GridPane.rowIndex="0" GridPane.columnIndex="5">
+		<CheckBox text="Dog"/>
+		<CheckBox text="Cat"/>
+		<CheckBox text="Bird"/>	
+	</VBox>
+	<HBox GridPane.rowIndex="0" GridPane.columnIndex="6">
+		<ToggleButton text="Toggle Me1" />
+		<ToggleButton text="Toggle Me2" />
+		<ToggleButton text="Toggle Me3" />
+		
+	</HBox>
+	<TextField GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+	<PasswordField GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+	<ComboBox GridPane.rowIndex="1" GridPane.columnIndex="2" GridPane.columnSpan="2">
+		<items>
+			<FXCollections fx:factory="observableArrayList">
+				<String fx:value="Esta é a escolha 1"/>
+				<String fx:value="Esta é a escolha 2"/>
+				<String fx:value="Esta é a escolha 3"/>
+				<String fx:value="Esta é a escolha 4"/>
+				<String fx:value="Esta é a escolha 5"/>
+			</FXCollections>
+		</items>
+		<value>
+			<String fx:value="Selecione um item abaixo"/>
+		</value>	
+	</ComboBox>
+	<ChoiceBox GridPane.rowIndex="1" GridPane.columnIndex="4">
+		<items>
+			<FXCollections fx:factory="observableArrayList">
+				<String fx:value="cb 1"/>
+				<String fx:value="cb 2"/>
+				<String fx:value="cb 3"/>
+				<String fx:value="cb 4"/>
+				<String fx:value="cb 5"/>
+				<String fx:value="cb 6"/>
+				<String fx:value="cb 7"/>
+			</FXCollections>
+		</items>
+	</ChoiceBox>
+	<Slider GridPane.rowIndex="2" GridPane.columnIndex="0" GridPane.columnSpan="4" min="0" max="100" showTickLabels="true" showTickMarks="true" minorTickCount="4" snapToTicks="true"/>
+	<Spinner GridPane.rowIndex="2" GridPane.columnIndex="4" min="0" max="100" editable="true" initialValue="4"/>
+	<ColorPicker GridPane.rowIndex="3" GridPane.columnIndex="0"/> 
+	<DatePicker GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+	
+	<Accordion expandedPane="$tp3" GridPane.rowIndex="2" GridPane.columnIndex="2" GridPane.columnSpan="4">
+		<panes>
+			<TitledPane text="Titulo do Pane" >
+				<Label text="Texto d exemplo. Este é um texto grande"/>
+			</TitledPane>
+			<TitledPane text="Titulo do Pane 2" >
+				<Label text="Texto d exemplo. Este é um texto grande"/>
+			</TitledPane>
+			<TitledPane text="Titulo do Pane 3" >
+				<Label text="Texto d exemplo. Este é um texto grande"/>
+			</TitledPane>
+			<TitledPane fx:id="tp3" text="Titulo do Pane 4" >
+				<Label text="Texto d exemplo. Este é um texto grande"/>
+			</TitledPane>
+		</panes>
+	</Accordion>
+</GridPane>
